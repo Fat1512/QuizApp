@@ -7,12 +7,18 @@ function FinishedScreen({ points, maxPoints, highestScore, dispatch }) {
         {Math.ceil(percentage)}%;
       </p>
       <p className="highscore">Highest Score {highestScore}</p>
-      <button
-        onClick={() => dispatch({ type: "restart" })}
-        className="btn btn-ui"
-      >
-        Restart
-      </button>
+
+      <div class="flex-container">
+        <button
+          onClick={() => dispatch({ type: "restart" })}
+          class="btn btn-ui"
+        >
+          Restart Quiz
+        </button>
+        <button onClick={() => dispatch({ type: "startBackward" })} class="btn">
+          Show Selected Answers
+        </button>
+      </div>
     </>
   );
 }

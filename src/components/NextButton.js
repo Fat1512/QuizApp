@@ -3,7 +3,7 @@ import { type } from "@testing-library/user-event/dist/type";
 function NextButton({ dispatch, index, numQuestions }) {
   return (
     <button
-      className="btn btn-ui"
+      className="btn btn-ui next-btn"
       onClick={() =>
         dispatch({
           type: index === numQuestions - 1 ? "finish" : "nextQuestion",

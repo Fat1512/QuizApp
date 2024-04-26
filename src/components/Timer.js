@@ -14,7 +14,7 @@ function Timer({ dispatch, secondsRemaining }) {
   return (
     <div className="timer">
       {Math.floor(secondsRemaining / 60) && "0"}
-      {Math.floor(secondsRemaining / 60)}:{secondsRemaining % 60 && "0"}
+      {Math.floor(secondsRemaining / 60)}:{secondsRemaining % 60 < 10 && "0"}
       {secondsRemaining % 60}
     </div>
   );

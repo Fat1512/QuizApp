@@ -22,6 +22,19 @@ html {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+.title-container,
+.toggle-theme {
+  display: flex;
+  justify-content: center;
+}
+.previous-btn {
+  grid-column: 1 / 2;
+  justify-self: start;
+}
+.next-btn {
+  grid-column: 3 / 4;
+  justify-self: end;
+}
 body {
   min-height: 100vh;
   color: var(--color-light);
@@ -83,7 +96,8 @@ h4 {
   margin-bottom: 2.4rem;
 }
 
-.start {
+.start,
+.form-start {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,6 +140,12 @@ progress {
   cursor: pointer;
   border-radius: 100px;
   transition: 0.3s;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  justify-items: center;
 }
 
 .btn:not([disabled]):hover {
@@ -211,6 +231,7 @@ progress {
   border: 2px solid var(--color-dark);
   padding: 1.35rem 2.8rem;
   border-radius: 100px;
+  grid-column: 2 / 3;
 }
 
 /* CREDIT: https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
